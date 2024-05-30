@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<section class="section">
+    <div class="container">
+        <h1 class="title" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px;">Delete a Book</h1>
+        <form method="post" action="/delete_book">
+            <div class="field">
+                <label class="label" for="title" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">Title:</label>
+                <div class="control">
+                    <input class="input" type="text" id="title" name="title" required style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">
+                </div>
+            </div>
+            <input type="hidden" name="_method" value="delete">
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" type="submit" style="background-color: #B54213; color:#ffffff; border-color: #631700; font-size: 25px; margin-top: 10px; font-family: Monotype Corsiva;">Delete Book</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock main %}

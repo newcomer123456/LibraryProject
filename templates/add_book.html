@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<section class="section">
+    <div class="container">
+        <h1 class="title" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px;">Add a New Book</h1>
+        <form method="post" action="/add_book">
+            <div class="field">
+                <label class="label" for="title" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">Title:</label>
+                <div class="control">
+                    <input class="input" type="text" id="title" name="title" required style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">
+                </div>
+            </div>
+            
+            <div class="field">
+                <label class="label" for="author" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">Author:</label>
+                <div class="control">
+                    <input class="input" type="text" id="author" name="author" required style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">
+                </div>
+            </div>
+            
+            <div class="field">
+                <label class="label" for="description" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">Description:</label>
+                <div class="control">
+                    <textarea class="textarea" id="description" name="description" required style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px; padding-right: 50px; padding-bottom: 50px;"></textarea>
+                </div>
+            </div>
+            
+            <div class="field">
+                <label class="label" for="num_pages" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">Number of Pages:</label>
+                <div class="control">
+                    <input class="input" type="number" id="num_pages" name="num_pages" required style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">
+                </div>
+            </div>
+            
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" type="submit" style="background-color: #B54213; color:#ffffff; border-color: #631700; font-size: 25px; margin-top: 10px; font-family: Monotype Corsiva;">Add Book</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock main %}

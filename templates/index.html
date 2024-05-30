@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center" style="color:#0c0200; font-family: Monotype Corsiva; font-size: 36px;"><b>Бібліотека</b></h1>
+        </div>
+    </div>
+    <div class="row"> 
+        {% for book in books %}
+        <div class="col-md-6 mb-4">
+            <div class="card" style="background-color:#F8A86A; color:#0c0200; font-family: Monotype Corsiva; font-size: 25px;">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 36px"><b>{{ book.title }}</b></h4>
+                    <p class="card-text" style="font-size: 25px"><b>Автор: {{ book.author }}</b></p>
+                    <p class="card-text" style="font-size: 25px"><b>Опис:</b> {{ book.description }}</p>
+                    <p class="card-text" style="font-size: 25px"><b>Кількість сторінок:</b> {{ book.num_pages }}</p>
+                    <a href="/books/{{ book.id }}" class="btn btn-primary" style="background-color:#B54213; border: 2px solid #631700;font-size: 25px">Читати</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+<a href="/add_book" class="btn btn-primary" style="background-color: #B54213; color:#ffffff; border-color: #631700; font-size: 25px; margin-top: 10px; font-family: Monotype Corsiva;">Додати книжку</a>
+<a href="/delete_book" class="btn btn-primary" style="background-color: #B54213; color:#ffffff; border-color: #631700; font-size: 25px; margin-top: 10px; font-family: Monotype Corsiva; margin-left: 120px;">Видалити книжку</a>
+{% endblock main %}
