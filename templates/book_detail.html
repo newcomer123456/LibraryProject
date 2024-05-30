@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center" style="color:#0c0200; font-family: Monotype Corsiva; font-size: 36px;"><b>{{ book.title }}</b></h1>
+            <p class="text-center" style="color:#0c0200; font-family: Monotype Corsiva; font-size: 25px;"><b>Автор: {{ book.author }}</b></p>
+            <p style="color:#0c0200; font-family: Monotype Corsiva; font-size: 25px;"><b>Опис:</b> {{ book.description }}</p>
+            <p style="color:#0c0200; font-family: Monotype Corsiva; font-size: 25px;"><b>Кількість сторінок:</b> {{ book.num_pages }}</p>
+        </div>
+    </div>
+</div>
+{% endblock main %}

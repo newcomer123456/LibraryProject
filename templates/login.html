@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h1 style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px;">Login</h1>
+<form method="post" action="/login">
+    <label for="username" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">Username:</label>
+    <input type="text" id="username" name="username" required style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">
+    <br>
+    <label for="password" style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">Password:</label>
+    <input type="password" id="password" name="password" required style="color:#0c0200; font-family: Monotype Corsiva; margin-top: 10px; font-size: 25px;">
+    <br>
+    <button type="submit" style="background-color: #B54213; color:#ffffff; border-color: #631700; font-size: 25px; margin-top: 10px; font-family: Monotype Corsiva;">Login</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="/add_user" class="btn btn-primary" style="background-color: #B54213; color:#ffffff; border-color: #631700; font-size: 25px; margin-top: 10px; font-family: Monotype Corsiva;">Зареєструватися</a>
+</form>
+{% if error %}
+<p style="color: red;">{{ error }}</p>
+{% endif %}
+
+{% endblock main %}
